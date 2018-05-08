@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <!-- <script src="js/localstorage.js"></script>     -->
+        <link rel="stylesheet" type="text/css" href="localstorage.css">
+        <style>
+            table,th,td{
+                border: 1px solid;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Results:<span id="result"></span>
+        </div>
+        <form id="myForm">
+            <div>
+                <p>Name:</p>
+                <input type="text" placeholder="fill in this blank" name="name">
+            </div>
+            <div>
+                <p>Company:</p>
+                <input type="text" placeholder="fill in this blank" name="company">
+            </div>
+            <div>
+                <p>Location:</p>
+                <input type="text" placeholder="fill in this blank" name="location">
+            </div>
+            <div>
+                <p>Gender:</p>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <br><br>
+            </div>
+            <div>
+                <input type="submit"></button>    
+            </div><br><br>
+            <div id="table">
+            </div>
+    </form>
+    <style>
+            table,tr,th,td{
+                border: 1px solid;
+                padding:10px;
+            }
+        </style>
+        <script src="js/localstorage.js"></script>
+    </body>
+</html>
