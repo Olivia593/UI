@@ -1,0 +1,41 @@
+<html>
+	<head>
+	</head>
+	<body>
+			<script>
+					var interval1,interval2;
+					function toRight(){
+						clearInterval(interval2);
+						clearInterval(interval1);
+						var x = document.getElementById('text1');
+						var y = document.getElementById('text2');
+						interval1 = setInterval(function(){
+							y.value = x.value.substring(x.value.length-1, x.value.length) + y.value;
+							x.value = x.value.substring(0,x.value.length-1);
+						},1000);
+					}
+					function toLeft(){
+						clearInterval(interval1);
+						clearInterval(interval2);
+						var x = document.getElementById('text1');
+						var y = document.getElementById('text2');
+		
+						interval2 = setInterval(function(){
+							x.value += y.value.substring(0, 1);
+							y.value = y.value.substring(1,y.value.length);
+						},1000);
+					}
+					function stop(){
+						console.log('hello');
+						clearInterval(interval1);
+						clearInterval(interval2);
+					}
+				</script>
+		<input type="text" id="text1">
+		<input type="text" id="text2"><br><br>
+		<button onclick="toRight()" > >> </button>
+		<button onclick="stop()"> || </button>
+		<button onclick="toLeft()"> << </button>
+		
+	</body>
+</html>
