@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+<div class="panel-heading">
+Post detail page  
+</div>  
+<div class="panel-body">
+  <h1> Post Info</h1>
+  <div class="row">
+    <div class="col-md-4"><label>Post Title</label></div>
+    <div class="col-md-4"><label>Post Description</label></div>
+  </div>
+  <div class="row"> 
+    <div class="col-md-4">{{post.title}}</div>
+    <div class="col-md-4">{{post.description}}</div> 
+    <div class="col-md-4">
+          <button class="btn btn-success" (click)="getComments(post.title)">Comments</button>
+          <button class="btn btn-success" (click)="addLike(post.title)">Like</button>
+          <span *ngIf="isLike"> {{count}} users like this post </span>
+    </div><br><br>
+  </div>
+  <div *ngIf="showDetails"><label>Comments: </label></div>
+  <div aria-colspan="4" *ngFor="let comment of comments">
+    <td *ngIf="showDetails">
+       {{comment.comments}}
+    </td>
+  </div>
+  <div *ngIf="isLike"><label>Users like this post: </label></div>
+  <div aria-colspan="4" *ngFor="let like of likes">
+    <td *ngIf="isLike">
+       {{like.email}}
+    </td>
+  </div>
+  <div *ngIf="showDetails">
+    <input type="text" [(ngModel)]="newComments.comment">
+    <button class="btn btn-success" (click)="createComments(post.title)">Post Comments</button>
+  </div> 
+  <button class="btn btn-success" (click)="gotolist()">Goto postlist</button>
+</div>
+</div>
+
