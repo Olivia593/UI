@@ -63,3 +63,11 @@ setTimeout(function(){
 },5000);
 
 
+// insertAdjacentHTML
+
+var div_elem = document.getElementById('group1');
+
+div_elem.insertAdjacentHTML('beforeend','<h1>beforeend</h1>');
+div_elem.insertAdjacentHTML('afterbegin','<h1>afterbegin</h1>');
+div_elem.insertAdjacentHTML('beforebegin','<h1>beforebegin</h1>');
+div_elem.insertAdjacentHTML('afterend','<h1>afterend</h1>');
