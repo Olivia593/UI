@@ -1,0 +1,45 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">{{pageTitle}}</div>
+    <div class="panel-body">
+      
+      <div class="row">
+        <div class="col-md-4"><label>Post Title</label></div>
+        <div class="col-md-4"><label>Post Description</label></div>
+      </div>
+
+      <div class="row" *ngFor="let post of posts">
+          <div class="col-md-4">
+              <a href="#" [routerLink]="['/details', post.title]">
+                    {{post.title}}
+              </a>
+          </div>
+          <div class="col-md-4">{{post.description}}</div>
+          <div class="col-md-4">
+              <button class="btn btn-success" (click)="getComments(post.title)">Comments</button>
+              <button class="btn btn-success" (click)="addLike(post.title)">Like</button>
+              <span *ngIf="selectedLike(post.title)"> {{count}} users like this post </span>
+          </div><br><br>  
+          
+          <div class="col-md-8" *ngIf="selectedPost(post.title)">
+                <div><label>Comments:</label></div>
+                <div aria-colspan="4" *ngFor="let comment of comments">
+                <td *ngIf="showDetails">
+                  {{comment.comments}}
+                </td>
+                </div><br>
+                <div>
+                  <input type="text" [(ngModel)]="newComments.comment">
+                  <button class="btn btn-success" (click)="createComments(post.title)">Create Comments</button>
+              </div>
+          </div>
+          <div class="col-md-8" *ngIf="selectedLike(post.title)">
+                <div><label>Users like this post: </label></div>
+                <div aria-colspan="4" *ngFor="let like of likes">
+                <td>
+                  {{like.email}}
+                </td>
+                </div><br>
+          </div> 
+     </div>      
+  </div>
+</div>
