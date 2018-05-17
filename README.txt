@@ -5,5 +5,14 @@ JavaScript:
 	String: length, replace, charAt, substring, Match, indexOf, RegExp
 	Funtcion: callback, self-invoking, closure, setTimeOut, setInterval, clearInterval
 	Object: object function, constructor function, prototype
+DOM:
+	getElementById(), querySelectorAll(), EventListener, PageLoad Listener
+
+Angularjs 1.X: 
+bootstrap, controller, directives, services, modules, .factory(), $scope, $rootScope, $http.post(), $cookies.get(),$cookies.put(), $cookies.getAll(), $location.path(), $routeProvider, $q,ng-model, ng-click, ng-repeat, ng-if
+express, mongoose, body-parser
+
+Angular 2: component, ngOnInit(), Guard, Service, FormsModule, HttpClinetModule, CookieService, Subject, http interceptor,
+providers, ActivateRoute, *ngFor, *ngIf, [(ngModel)], (click), [routerLink] 
 	
 	
