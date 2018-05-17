@@ -1,0 +1,23 @@
+<form ng-controller="postController">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+    <div class="form-group">
+      <label for="jobtitle">Job Title</label>
+      <input type="text" class="form-control" id="jobtitle" placeholder="Job Title" ng-model="title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" placeholder="Description" ng-model="description">
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Location" ng-model="location">
+    </div>
+    <div class="form-group">
+        <label for="keyword">Keyword</label>
+        <input type="text" class="form-control" id="keyword" placeholder="ex: UI" ng-model="keyword">
+    </div>
+    <button class="btn btn-primary" ng-click="save()">Save</button>
+    </div>
+  </div>
+</form>

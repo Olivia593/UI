@@ -1,0 +1,56 @@
+<div class="container" ng-controller="registerController">
+    <form>
+      <div class="form-group row">
+        <label for="UserName" class="col-sm-2 col-form-label">UserName</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="username" placeholder="UserName" ng-model="username">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="email" placeholder="Email" ng-model="email">
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="password" placeholder="Password" ng-model="password">
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="location" class="col-sm-2 col-form-label">Location</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="location" placeholder="Location" ng-model="location">
+          </div>
+      </div>
+      <div class="form-group row">
+          <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="phone">
+          </div>
+      </div>
+      <fieldset class="form-group row">
+        <legend class="col-form-legend col-sm-2">User Type</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="company" id="gridRadios1" value="company" checked ng-model="UserType">
+              Company
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="jobseeker" id="gridRadios2" value="jobseeker" ng-model="UserType">
+              Job seeker
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" ng-click="register()">Sign up</button>
+        </div>
+      </div>
+    </form>
+  </div>
