@@ -87,18 +87,37 @@ class App extends Component {
   };
 }
 mouseOver = (obj) => {
-    this.setState(obj.hover = true);
+  obj.hover  = true;
+  this.forceUpdate();
 }
-mouseOut = () => {
-    this.setState({hover: false});
+mouseOut = (obj) => {
+    // this.setState({hover: false});
+  obj.hover = false;
+  this.forceUpdate();
 }
 onRemoveItem=(obj)=>{
-    this.state.filter((item,index)=>{
+    let list = this.state.mylist.filter((item,index)=>{
       if(obj.title != item.title){
         return true;
       }
     })
+    this.setState({mylist:list});
+    this.forceUpdate();
 };
+onAddItem = (obj)=>{
+    let copy = Object.assign({},obj);
+    let list = JSON.parse(JSON.stringify(this.state.mylist));
+    list.push(copy);
+    let recomm = this.state.recommendations.filter((item,index)=>{
+      if(obj.title != item.title){
+        return true;
+      }
+    })
+    this.setState({recommendations:recomm});
+    console.log(this.state.recommendations);
+    this.setState({mylist:list});
+    this.forceUpdate();
+}
 render() {
     return <div>
     <table>
@@ -107,7 +126,7 @@ render() {
       <tr>
       {
             this.state.mylist.map((item,index)=>{
-                return <td>
+                return <td key={index}>
                         {item.title}
                     </td>
             })
@@ -116,8 +135,8 @@ render() {
       <tr>
         {
             this.state.mylist.map((item,index)=>{
-                return <td>
-                        {<img src={item.img} onMouseOver={item.mouseOver}/>}
+                return <td key={index}> 
+                        {<img src={item.img} onMouseOver={()=>this.mouseOver(item)}/>}<br/>
                         {item.hover ? (<button onClick={()=>this.onRemoveItem(item)}>Remove</button>) : null}
                     </td>
             })
@@ -127,7 +146,7 @@ render() {
       <tr>
       {
             this.state.recommendations.map((item,index)=>{
-                return <th>
+                return <th key={index}>
                         {item.title}
                     </th>
             })
@@ -136,9 +155,9 @@ render() {
       <tr>
         {
             this.state.recommendations.map((item,index)=>{
-                return <td>
-                        {<img src={item.img} onMouseOver={this.mouseOver}/>}
-                        {this.state.hover ? (<button>Add</button>) : null}
+                return <td key={index}>
+                        {<img src={item.img} onMouseOver={()=>this.mouseOver(item)} />}
+                        {item.hover ? (<button onClick={()=>this.onAddItem(item)}>Add</button>) : null}
                     </td>
             })
         }
