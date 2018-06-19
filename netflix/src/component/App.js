@@ -6,21 +6,24 @@ import { remove_item, add_item } from '../action/app';
 class App extends Component {
   constructor(){
     super();
-    console.log(this.props);
-    this.mouseOver = this.mouseOver.bind(this);
-    this.mouseOut = this.mouseOut.bind(this);
     this.state={
     }
   }
 
 mouseOver = (obj) => {
+  // console.log(event.target);
   obj.hover  = true;
   this.forceUpdate();
 }
 mouseOut = (obj) => {
     // this.setState({hover: false});
-  obj.hover = false;
+  setTimeout(
+    function(){obj.hover = false;},1
+  );
   this.forceUpdate();
+    // obj.hover = false;
+
+  //
 }
 onRemoveItem=(obj)=>{
     // let list = this.state.mylist.filter((item,index)=>{
@@ -47,11 +50,16 @@ onAddItem = (obj)=>{
     // this.forceUpdate();
     this.props.dispatch(add_item(obj));
 }
+
 render() {
-    return <div>
+    return <div id="app">
+    <img src="http://localhost:3000/background.png" id="background"/>
+    <header>
+      <h1>TV Series</h1>
+    </header>
     <table>
       <tbody>
-      <tr><th>My Lists</th></tr>
+      <tr><th id="mylist">My Lists</th></tr>
       <tr>
       {
             this.props.mylist.map((item,index)=>{
@@ -65,19 +73,21 @@ render() {
         {
             this.props.mylist.map((item,index)=>{
                 return <td key={index}> 
-                        {<img src={item.img} onMouseOver={()=>this.mouseOver(item)}/>}<br/>
-                        {item.hover ? (<button onClick={()=>this.onRemoveItem(item)}>Remove</button>) : null}
+                        <div onMouseOver={()=>this.mouseOver(item)} onMouseOut={()=>this.mouseOut(item)}>
+                          {<img src={item.img}/>}<br/>
+                          {item.hover ? (<button onClick={()=>this.onRemoveItem(item)}>Remove</button>) : null}
+                        </div>
                     </td>
             })
         }
       </tr>
-      <tr><th>Recommendations</th></tr>
+      <tr><th id="recom">Recommendations</th></tr>
       <tr>
       {
             this.props.recommendations.map((item,index)=>{
-                return <th key={index}>
+                return <td key={index}>
                         {item.title}
-                    </th>
+                    </td>
             })
         }
       </tr>
@@ -85,7 +95,7 @@ render() {
         {
             this.props.recommendations.map((item,index)=>{
                 return <td key={index}>
-                        {<img src={item.img} onMouseOver={()=>this.mouseOver(item)} />}<br/>
+                        {<img src={item.img} onMouseOver={()=>this.mouseOver(item)} onMouseOut={()=>this.mouseOut(item)}/>}<br/>
                         {item.hover ? (<button onClick={()=>this.onAddItem(item)}>Add</button>) : null}
                     </td>
             })

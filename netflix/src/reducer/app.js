@@ -86,9 +86,12 @@ function appReducer(state=initialAppState,actions){
               return true;
             }
           })
+        let item = Object.assign({},actions.obj);
+        let newRecom = JSON.parse(JSON.stringify(state.recommendations));
+        newRecom.push(item);
         return {
             mylist:list,
-            recommendations: state.recommendations
+            recommendations: newRecom
         }  
         
         break;
