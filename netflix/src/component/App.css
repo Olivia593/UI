@@ -40,7 +40,7 @@
 }
 header{
   position: absolute;
-  left: 45%;
+  left: 20px;
   color: red;
   display: inline;
   background-image: url("../background.png");
@@ -52,7 +52,7 @@ table{
   top: 20%;
 }
 table td{
-  border: 2px solid black;
+  border: 2px solid lightslategray;
   background-color: grey;
   padding: 5px;
   margin: 10px;
@@ -62,8 +62,8 @@ th{
   padding: 10px 10px 10px 10px;
 }
 #mylist{
-  color: lightseagreen;
-  border: blue solid 2px;
+  color: black;
+  border: lightslategray solid 2px;
 }
 #recom{
   color: red;
