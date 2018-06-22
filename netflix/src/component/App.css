@@ -1,5 +1,5 @@
 .App{
-  background-image: url("../background.png");
+  background-color: #222;
 }
 .App {
   text-align: center;
@@ -24,10 +24,11 @@
 .App-intro {
   font-size: large;
 }
-#background{
-  min-height: 30%;
-  min-width: 1024px;
 
+#app{
+  min-height: 1024px;
+  min-width: 1024px;
+  background-color: black;
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
@@ -43,13 +44,13 @@ header{
   left: 20px;
   color: red;
   display: inline;
-  background-image: url("../background.png");
   /* bring your own prefixes */
 }
 table{
   position: absolute;
-  left: 30%;
-  top: 20%;
+  left: 20px;
+  top: 7%;
+  color: white;
 }
 table td{
   border: 2px solid lightslategray;
@@ -61,13 +62,26 @@ th{
   border: 3px solid black;
   padding: 10px 10px 10px 10px;
 }
+.image{
+  width: 200px;
+}
 #mylist{
-  color: black;
+  color: red;
   border: lightslategray solid 2px;
 }
 #recom{
   color: red;
   border: lightslategray solid 2px;
+}
+.removeBtn{
+  padding: 0px 73px 0px 73px;
+  color: blue;
+  font-weight: bold;
+}
+.addBtn{
+  padding: 0px 73px 0px 73px;
+  color: yellow;
+  font-weight: bold;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
