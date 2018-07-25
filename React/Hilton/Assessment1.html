@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <style>
+                body{
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-image: url("img/background.png");
+                }
+                header{
+                    background-color: #202020;
+                }
+                header #back{
+                    background-color: black;
+                    border: none;
+                    color: white;
+                    padding: 12px 28px;
+                    text-align: center;
+                    text-decoration-style: solid;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 16px;
+                    border-radius: 12px;
+                }
+                header #title{
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-200px);
+                    font-size: 48px;
+                    color:white;
+                }
+                #hotel{
+                    padding: 10px;
+                    margin: 30px 20px 20px 20px;
+                    text-align: center;
+                    background-image: url("img/hotelexterior.jpg");
+                    background-size: 100% 100%;
+                    height: 450px;
+                    border:white solid;
+                }
+                #info{
+                    margin: 30px 20px 20px 20px;
+                }
+                #info label{
+                    font-size:25px;
+                    color:white;
+                    margin: 3px;
+                }
+                #info #addr1{
+                    font-size:20px;
+                    color:rgb(133, 148, 160);
+                    margin:3px;
+                }
+                #info #addr2{
+                    font-size:20px;
+                    color:rgb(133, 148, 160);
+                    margin:3px;
+                }
+                #info #tel{
+                    color:lightcyan;
+                    margin:4px;
+                    font-size: 18px;
+                    text-decoration: underline;
+                }
+				#back{
+					position: absolute;
+					left: 10px;
+					width: 100px;
+					height: 50px;
+				}
+				section{
+                    margin: 30px 20px 20px 20px;
+                }
+				button{
+					background: linear-gradient(gray, white);;
+					font-weigth: bold;
+					font-sie: 18px;
+					padding: 20px 20px 20px 20px;
+				}
+				.map .sign{
+					border-top-left-radius: 12px;
+					border-top-right-radius: 12px;
+					padding: 0px 0px 0px 280px;
+				}
+				.photo .sign{
+					padding: 0px 0px 0px 225px;
+				}
+				.amen .sign{
+					border-bottom-left-radius: 12px;
+					border-bottom-right-radius: 12px;
+					padding: 0px 0px 0px 246px;
+				}
+		        </style>
+    </head>
+    <body>
+        <header>           
+            <label id="title">Hotel    Details</label> 
+            <button id="back"><span id="sign"><</span><span id="text">Back</span></button> 
+        </header>
+        <section id="hotel">
+        </section>
+        <section id="info">
+            <label>Hilton Chicago</label>
+            <div id="addr1">720 South Michigan Avenue</div>
+            <div id="addr2">Chicago, Illinois, 60605</div>
+            <div id="tel">1-312-922-4400</div>
+        </section>
+        <section id="nav">
+            <div><button class="map">Map<span class="sign">></span></button></div>
+			<div><button class="photo">Photo Gallery<span class="sign">></span></button></div>
+			<div><button class="amen">Amenities<span class="sign">></span></button></div>
+        </section>
+
+    </body>
+</html>

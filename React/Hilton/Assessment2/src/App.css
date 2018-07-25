@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+table{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+td{
+  border: 2px solid grey;
+  /* padding: 0px 10px 10px 10px; */
+}
+
+.room{
+  background-color: grey;
+  padding: 12px 60px 12px 12px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: bold;
+}
+td{
+  text-align: center;
+}
+.adult{
+  margin: 8px 8px 2px 2px;
+  font-size: small;
+  display: inline-block;
+}
+.child{
+  margin: 8px 8px 2px 2px;
+  font-size: small;
+  display: inline-block;
+}
+.selectAdult{
+  display: inline-block;
+  margin: 8px 20px 2px 8px;
+}
+.selectChild{
+  display: inline-block;
+  margin: 4px 8px 2px 8px;
+}
+.select{
+  padding: 0px 0px 5px 0px;
+}
+.room2 {
+  background-color: lightgray;
+}
+.room3 {
+  background-color: lightgray;
+}
+.room4 {
+  background-color: lightgray;
+}

@@ -1,0 +1,90 @@
+.App{
+  background-color: #222;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#app{
+  min-height: 1024px;
+  min-width: 1024px;
+  background-color: black;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+header{
+  position: absolute;
+  left: 20px;
+  color: red;
+  display: inline;
+  /* bring your own prefixes */
+}
+table{
+  position: absolute;
+  left: 20px;
+  top: 7%;
+  color: white;
+  font-weight: bold;
+}
+table td{
+  border: 2px solid lightslategray;
+  background-color: grey;
+  padding: 5px;
+  margin: 10px;
+}
+th{
+  border: 3px solid black;
+  padding: 10px 10px 10px 10px;
+}
+.image{
+  width: 200px;
+}
+#mylist{
+  color: red;
+  border: lightslategray solid 2px;
+}
+#recom{
+  color: red;
+  border: lightslategray solid 2px;
+}
+.removeBtn{
+  padding: 0px 73px 0px 73px;
+  color: blue;
+  font-weight: bold;
+}
+.addBtn{
+  padding: 0px 73px 0px 73px;
+  color: yellow;
+  font-weight: bold;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
