@@ -1,4 +1,4 @@
-This repository includes projects combined of JavaScript, jQuery, Angularjs, Angular2, Node.js, Express.js, React.js
+This repository includes projects combined of JavaScript, jQuery, Angularjs, Angular2, Node.js, Express.js, React.js, JWT
 
 JavaScript: 
 	Array: push, pop, shift, delete, splice
@@ -15,4 +15,5 @@ express, mongoose, body-parser
 Angular 2: component, ngOnInit(), Guard, Service, FormsModule, HttpClinetModule, CookieService, Subject, http interceptor,
 providers, ActivateRoute, *ngFor, *ngIf, [(ngModel)], (click), [routerLink] 
 	
-	
+React: ES6, import, export, class, state, props, render(), ComponentDidMount(), event handling, arrow funtions
+Redux: actions, reducer, store, mapStateToProps, createStore()
