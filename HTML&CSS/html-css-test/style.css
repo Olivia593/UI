@@ -1,0 +1,141 @@
+:root {
+	--main-margin: 1%;
+}
+html {
+	/* height: 100%; */
+	width:100%;
+	font-family: "Helvetica";
+}
+body {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 30px;
+	height: 30px;
+	padding: 20px 0px 10px 5px;
+	float: left;
+	overflow: auto;
+	vertical-align: middle;
+}
+.title {
+	float: left;
+	font-size: 35px;
+	padding: 0px 20px 20px 5px;
+	color: white;
+	transform: translate(0px, -15px);
+}
+nav {
+	background-color: black;
+}
+ul {
+	margin: 0;
+
+}
+nav ul li{
+	/* list-style: none; */
+	display: inline-block;
+	font-size:15px;
+	font-weight:bolder;
+	padding: 30px 20px 20px 20px;
+}
+header a{
+	text-decoration: none;
+	color: aqua;
+}
+header a:hover {
+	color: #fff;
+}
+.part1{
+	width:100%;
+	height:80px;
+	font-size: 35px;
+	font-weight: 700;
+	transform: translate(-10px,0px);
+}
+
+.part1 span{
+	font-style: italic;
+}
+.part2 {
+	width: 100%;
+	overflow: auto;
+	padding-bottom:25px;
+	border-bottom:1px solid black;
+}
+.hands {
+	width: 49%;
+	float: left;
+	padding-right: 2%;
+	vertical-align: text-top;
+}
+.intro{
+	/* width: 49%;
+	float: left; */
+	display: inline;
+}
+
+.wrapper{
+	width:100%;
+	display:grid;
+	grid-template-columns: 300px 300px 300px;
+	grid-gap:30px;
+	padding-top:20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+.wrapper header{
+	font-size:10px;
+}
+.wrapper header span{
+	font-style:italic;
+}
+.wrapper .left{
+	padding-right:15px;
+	border-right: 1px solid black;
+}
+.wrapper .middle{
+	padding-right:15px;
+	border-right: 1px solid black;
+}
+footer{
+	padding-top:10px;
+	padding-bottom: 20px;
+	font-size:12px;
+	position: initial;
+}
+footer ul{
+	position: absolute;
+	left:75px;
+}
+footer ul li{
+	display: inline-block;
+	padding-left:10px;
+	padding-right:10px;
+}
+footer a{
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		width: 100%;
+	}
+	ul {
+		text-align: center;
+		padding: 0;
+	}
+	li {
+		display: block;
+	}
+	.left {
+		float: none;
+		width: 100%;
+	}
+	aside {
+		float: none;
+		width: 100%;
+	}
+}

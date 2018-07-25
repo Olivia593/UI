@@ -1,0 +1,34 @@
+In this directory, please implement a website similar to the one shown in "./design.png".
+
+GUIDELINES
+
+ 1. Keep styles in "./styles.css".
+ 2. The font-family is "Helvetica".
+ 3. All links should point to "http://www.google.com".
+ 4. The four links in the navigation have their color set to "aqua". On hover, their color should be set to "#fff".
+ 5. The two links in the footer should have an underline. They should have no hover state.
+ 6. The logo is included in this directory as "./logo.png".
+ 7. The image is included in this directory as "./hands.jpg".
+ 8. Do not worry about exact spacing, sizing, etc., just implement something close to the design. For reference, the header is 1000px wide, including padding.
+ 9. The three columns take up 1/3 of their space, including padding. Make sure the columns are balanced, i.e., all columns will be as tall as the tallest column.
+10. Do your best to write SEO-friendly HTML, with a legible stylesheet.
+11. Make sure your code works on a recent version of Chrome.
+12. When you are finished, zip the directory and rename it `html-css-test-${firstName}-${lastName}.zip`.
+
+NAVIGATION LINKS
+ABOUT
+PRODUCTS
+WHO WE ARE
+CONTACT
+
+HEADLINE COPY
+What You Need, Before You Need It
+
+PARAGRAPH COPY
+A company, abbreviated as co., is a legal entity made up of an association of people, be they natural, legal, or a mixture of both, for carrying on a commercial or industrial enterprise.
+ 
+FOOTER LINKS
+Terms &amp; Conditions
+Careers 
+
+~ Good luck! ~
