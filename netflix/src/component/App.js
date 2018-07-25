@@ -4,26 +4,20 @@ import { connect } from 'react-redux';
 import { remove_item, add_item } from '../action/app';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state={
-    }
+  constructor(props){
+    super(props);
+    this.state={};
   }
 
 mouseOver = (obj) => {
-  // console.log(event.target);
   obj.hover  = true;
   this.forceUpdate();
 }
 mouseOut = (obj) => {
-    // this.setState({hover: false});
   setTimeout(
     function(){obj.hover = false;},1
   );
   this.forceUpdate();
-    // obj.hover = false;
-
-  //
 }
 onRemoveItem=(obj)=>{
     // let list = this.state.mylist.filter((item,index)=>{
